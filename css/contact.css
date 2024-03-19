@@ -1,0 +1,482 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; /* Hackpara Box Model*/
+  background-image: url(../Img/PlantillaHoneyCake.webp);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: oblique;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 16px; /* 1rem = 10px */
+ 
+}
+.titulo {
+  text-align: center;
+  font-size: 7rem;
+  margin-top: 11rem;
+  margin-bottom: 10rem;
+  color: rgb(165, 91, 31);
+  font-style: oblique;
+  font-weight: 600;
+}
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+ /**navegacion**/
+ .links-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.links {
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+@media (min-width: 900px) {
+  .links-principal {
+      flex-direction: row;
+      justify-content: center;
+  }
+}
+@media (max-width: 920px) {
+    .links-principal, .contenedor {
+      display: flex;
+      flex-flow: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 0 7rem 0 7rem;
+    }
+}
+@media (max-width: 750px) {
+  .links-principal, .contenedor{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+}
+.links-principal a {
+  --glow-color: #dfb5ab94;
+  --glow-spread-color: #d8a69b63;
+  --enhanced-glow-color: rgba(251, 252, 252, 0);
+  --btn-color: #e2bcb7d7;
+  border: .20em solid var(--glow-color);
+  padding: 1em 3em;
+  color: rgba(170, 100, 43, 0.932);
+  font-size: 1.9rem;
+  background-color: var(--btn-color);
+  border-radius: 4em;
+  outline: none;
+  -webkit-box-shadow: 0 0 .5em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+          box-shadow: 0 0 .2em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .1em var(--glow-color);
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.1s;
+  text-decoration: none;
+  text-align: center;
+  margin: .5rem .5rem .5rem .5rem;
+}
+.links-principal a:after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 50%;
+  width: 50%;
+  -webkit-filter: blur(2em);
+      filter: blur(5em);
+      opacity: 1;
+  -webkit-transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+      transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+} 
+.links-principal a:hover {
+  color: rgb(255, 255, 255);
+  background-color: var(--glow-color);
+  -webkit-box-shadow: 0 0 1em .25em var(--glow-color),
+      0 0 4em 2em var(--glow-spread-color),
+      inset 0 0 .75em .25em var(--glow-color);
+      box-shadow: 0 0 1em .25em var(--glow-color),
+      0 0 4em 2em var(--glow-spread-color),
+      inset 0 0 .75em .25em var(--glow-color);
+} 
+.links-principal a:active {
+  -webkit-box-shadow: 0 0 0.6em .25em var(--glow-color),
+      0 0 2.5em 2em var(--glow-spread-color),
+      inset 0 0 .5em .25em var(--glow-color);
+      box-shadow: 0 0 0.6em .25em var(--glow-color),
+      0 0 2.5em 2em var(--glow-spread-color),
+      inset 0 0 .5em .25em var(--glow-color);
+}
+.links-principal a {
+  box-shadow: 8px 28px 78px -9px rgba(89, 204, 51, 0.212);
+}
+/**Formulario**/
+.form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 10px;
+    padding-inline: 2em;
+    padding-bottom: 0.6em;
+    background-color: rgba(255, 181, 181, 0.493);
+    border-radius: 20px;
+} 
+  .form-heading {
+    text-align: center;
+    color: #693d33;
+    font-size: 2.5rem;
+    background-color: transparent;
+    align-self: center;
+}
+.form-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border-radius: 10px;
+    padding: 0.6em;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #863927;
+    box-shadow: inset 2px 5px 10px rgba(5, 5, 5, 0.575);
+}
+.input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #ffffff;
+    padding-inline: 1em;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 400;
+    font-style: oblique;
+    font-size: 2rem;
+}
+.sendMessage-btn {
+    cursor: pointer;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #693d33;
+    outline: 2px solid #693d33;
+    transition: all ease-in-out 0.3s;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: oblique;
+}
+.sendMessage-btn:hover {
+    transition: all ease-in-out 0.3s;
+    background-color: #a8756a;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+.form-card1 {
+    border-radius: 22px;
+    margin-top: 10rem;
+    transition: all 0.3s;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    align-content: space-between;
+    text-align: center;
+}
+.form-card2 {
+    border-radius: 2rem;
+    transition: all 0.2s;
+    width:450px;
+}
+.form-card2:hover {
+    transform: scale(0.95);
+    border-radius: 20px;
+}
+.map {
+    position:relative;
+}
+.map iframe {
+    height:350px;
+    width:350px;
+    position:relative;
+    border-radius: 3rem;
+    margin-bottom: 10rem;
+}
+@media (max-width: 800px) {
+    .map, .form-card1, .form-card2, .map iframe{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.tmap {
+    color: rgb(165, 91, 31);
+    font-size: 3rem;
+}
+.back, .mapita, .form-card2 {
+    box-shadow: 2px 5px 22px -3px rgba(13,82,17,1);
+}
+
+/** Footer **/
+.contenedor-footer1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  align-content: space-between;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 6rem;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.158), rgba(64, 255, 0, 0.288));
+}
+.footer {
+  text-align: center;
+  margin-top: 6rem;
+  grid-column: 1 / 4 ;
+  font-size: 1.3rem;
+}
+.redes {
+  display: grid;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  place-content: center;
+}
+.icono {
+  height: 70px;
+  width: auto;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .contenedor-footer1 {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-top: 8rem;
+  }
+}
+.horarios {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+.foot {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.p {
+  font-style: normal;
+}
+.p1 {
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.hor {
+  margin-bottom: 4.5rem;
+}
+.dir {
+  margin-top: 4rem;
+  padding-top: 1rem;
+}
+.follow {
+  margin-bottom: 5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+} 
+/**facebook**/
+.face {
+  width: 45px;
+  height: 45px;
+  background-color: #3b5998;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.185),
+ 0px 3px 3px rgba(255, 255, 255, 0.178) inset,
+ 0px -3px 3px rgba(0, 0, 0, 0.281) inset;
+  transition: all .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+  padding-bottom: 3px;
+  text-decoration: none;
+  margin: 0 0 1.5rem 0;
+}
+.face::before {
+  background-color: transparent;
+  content: "f";
+  font-size: 1.1em;
+  font-weight: 600;
+  color: white;
+  z-index: 5;
+  transition: all .3s;
+}
+.face::after {
+  content: "acebook";
+  background-color: transparent;
+  font-size: 0;
+  opacity: 0;
+  font-weight: 700;
+  color: white;
+  z-index: 5;
+  transition: all .3s;
+  transform: translateX(60px);
+}
+.face:hover {
+  width: 160px;
+  border-radius: 30px;
+}
+.face:hover::after {
+  opacity: 1;
+  font-size: 1.1em;
+  transform: translateX(0px);
+}
+.face:hover .shine {
+  transform: translate(-70px ,10px);
+}
+/**Instagram**/
+.insta {
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .3s;
+  cursor: pointer;
+  position: relative;
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  overflow: hidden;
+  font-family: "Lobster Two", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+}
+.svgIcon {
+  transition-duration: .3s;
+}
+.svgIcon path {
+  fill: white;
+}
+.text {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  width: 160px;
+  opacity: 0;
+  transition-duration: .3s;
+}
+.insta:hover {
+  width: 160px;
+  transition-duration: .3s;
+  border-radius: 30px;
+}
+.insta:hover .text {
+  opacity: 1;
+  transition-duration: .3s;
+}
+.insta:hover .svgIcon {
+  opacity: 0;
+  transition-duration: .3s;
+}
+/** Whatsapp **/ 
+.whatsapp {
+  width: 45px;
+  height: 45px;
+  background-color: #25d366;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.185),
+0px 3px 3px rgba(255, 255, 255, 0.178) inset,
+0px -3px 3px rgba(0, 0, 0, 0.281) inset;
+  transition: all .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+  padding-bottom: 3px;
+  text-decoration: none;
+  margin: 1.5rem 0 1.5rem 0;
+}
+.whatsapp::before {
+  background-color: transparent;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: white;
+  z-index: 5;
+  transition: all .3s;
+}
+.whatsapp::after {
+  background-color: transparent;
+  font-size: 0;
+  opacity: 0;
+  font-weight: 700;
+  color: white;
+  z-index: 5;
+  transition: all .3s;
+  transform: translateX(60px);
+}
+.whatsapp:hover {
+  width: 160px;
+  border-radius: 30px;
+}
+.whatsapp:hover::after {
+  opacity: 1;
+  font-size: 1.1em;
+  transform: translateX(0px);
+}
+.whatsapp:hover .shine {
+  transform: translate(-70px ,10px);
+}
+.iconow {
+  width: 70%;
+}
+.text {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  width: 160px;
+  opacity: 0;
+  transition-duration: .3s;
+}
+.whatsapp:hover {
+  width: 160px;
+  transition-duration: .3s;
+  border-radius: 30px;
+}
+.whatsapp:hover .text {
+  opacity: 1;
+  transition-duration: .2s;
+}
+.whatsapp:hover .iconow {
+  opacity: 0;
+  transition-duration: .2s;
+}
